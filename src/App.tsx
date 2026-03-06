@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { StoreProvider, useStore } from '@/store';
 import { AuthProvider, useAuth } from '@/context/AuthContext';
 import { Sidebar } from '@/components/layout/Sidebar';
@@ -136,19 +136,16 @@ function AuthLoadingScreen() {
 function AppInner() {
   const { user, authLoading } = useAuth();
   const [activeView, setActiveView] = useState<ActiveView>('dashboard');
-  const [selectedDecision, setSelectedDecision] = useState<Decision | null>(null);
 
   if (authLoading) return <AuthLoadingScreen />;
   if (!user) return <LoginScreen />;
 
-  const handleSelectDecision = (d: Decision) => {
-    setSelectedDecision(d);
+  const handleSelectDecision = (_d: Decision) => {
     setActiveView('decisions');
   };
 
   const handleNavigate = (view: ActiveView) => {
     setActiveView(view);
-    if (view !== 'decisions') setSelectedDecision(null);
   };
 
   return (

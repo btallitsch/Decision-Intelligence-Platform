@@ -7,7 +7,7 @@ import {
   statusLabel, statusColor, confidenceColor, sentimentColor,
   sentimentIcon, severityColor, formatDate,
 } from '@/utils/formatters';
-import { ArrowLeft, Lock, Unlock, Calendar, Tag } from 'lucide-react';
+import { ArrowLeft, Lock, Unlock, Calendar } from 'lucide-react';
 
 interface DecisionDetailProps {
   decision: Decision;

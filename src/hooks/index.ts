@@ -4,7 +4,7 @@ import { useStore } from '@/store';
 import { useAuth } from '@/context/AuthContext';
 import { Decision, Outcome, DecisionDebt } from '@/types';
 import {
-  writeDecision, removeDecision, cascadeDeleteDecision,
+  writeDecision, cascadeDeleteDecision,
   writeOutcome, removeOutcome,
   writeDebt, removeDebt,
 } from '@/firebase/firestore';

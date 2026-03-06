@@ -5,8 +5,7 @@ import { Header } from '@/components/layout/Header';
 import { Card, StatCard } from '@/components/ui/Card';
 import {
   BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer,
-  PieChart, Pie, Cell, Legend, RadarChart, Radar, PolarGrid,
-  PolarAngleAxis, PolarRadiusAxis,
+  PieChart, Pie, Cell, Legend,
 } from 'recharts';
 import { TrendingUp, Activity, Target, BookOpen } from 'lucide-react';
 
