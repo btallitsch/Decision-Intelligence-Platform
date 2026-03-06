@@ -1,14 +1,14 @@
 import React from 'react';
 import { useStore } from '@/store';
 import { computeMetrics } from '@/utils/analytics';
-import { statusColor, statusLabel, formatRelative, severityColor } from '@/utils/formatters';
+import { statusColor, formatRelative, severityColor } from '@/utils/formatters';
 import { StatCard, Card } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import {
   AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer,
 } from 'recharts';
-import { GitBranch, CheckCircle2, AlertTriangle, TrendingUp, Activity } from 'lucide-react';
+import { GitBranch, AlertTriangle, TrendingUp, Activity } from 'lucide-react';
 import { ActiveView, Decision } from '@/types';
 
 interface DashboardProps {
