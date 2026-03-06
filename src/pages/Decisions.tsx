@@ -9,12 +9,12 @@ import { DebtForm } from '@/components/debt/DebtForm';
 import { Modal } from '@/components/ui/Modal';
 import { Button } from '@/components/ui/Button';
 import { Header } from '@/components/layout/Header';
-import { Search } from 'lucide-react';
+import { Search, Filter } from 'lucide-react';
 
 export const DecisionsPage: React.FC = () => {
   const { decisions, addDecision, updateDecision, deleteDecision } = useDecisions();
-  const { addOutcome, getOutcomesForDecision } = useOutcomes();
-  const { addDebt, resolveDebt, getDebtForDecision } = useDecisionDebt();
+  const { outcomes, addOutcome, getOutcomesForDecision } = useOutcomes();
+  const { debts, addDebt, resolveDebt, getDebtForDecision } = useDecisionDebt();
 
   const [selectedDecision, setSelectedDecision] = useState<Decision | null>(null);
   const [editingDecision, setEditingDecision] = useState<Decision | null | 'new'>(null);

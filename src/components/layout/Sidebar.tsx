@@ -2,6 +2,7 @@ import React from 'react';
 import { LayoutDashboard, GitBranch, CheckCircle2, AlertTriangle, BarChart3 } from 'lucide-react';
 import { ActiveView } from '@/types';
 import { useStore } from '@/store';
+import { UserMenu } from '@/components/auth/UserMenu';
 
 interface NavItem {
   id: ActiveView;
@@ -147,19 +148,8 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeView, onNavigate }) => {
         })}
       </nav>
 
-      {/* Footer */}
-      <div
-        style={{
-          padding: '16px 20px',
-          borderTop: '1px solid var(--color-border)',
-          fontSize: '10px',
-          fontFamily: 'var(--font-mono)',
-          color: 'var(--color-text-muted)',
-          letterSpacing: '0.05em',
-        }}
-      >
-        {state.decisions.length} DECISIONS TRACKED
-      </div>
+      {/* User Menu Footer */}
+      <UserMenu />
     </aside>
   );
 };

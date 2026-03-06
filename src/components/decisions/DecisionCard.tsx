@@ -7,6 +7,7 @@ import {
   statusLabel,
   statusColor,
   confidenceColor,
+  formatDate,
   formatRelative,
 } from '@/utils/formatters';
 import { Edit2, Trash2, ChevronRight, Lock, Unlock } from 'lucide-react';
